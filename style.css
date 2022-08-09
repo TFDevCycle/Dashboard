@@ -137,14 +137,13 @@ header {
 .appliances {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 340px;
+  width: 373px;
 }
 
 .appliance {
   position: relative;
   height: 170px;
-  width: 45%;
+  width: 35%;
   margin: 10px 0;
 }
 .appliance span {
