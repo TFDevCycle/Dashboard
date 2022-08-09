@@ -14,6 +14,10 @@
 .appliance label::before {
   background-color: white;
 }
+.navbar {
+    min-width: 420px;
+}
+
 
 * {
   font-family: "Lato", sans-serif;
