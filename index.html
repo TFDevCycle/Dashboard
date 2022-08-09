@@ -54,7 +54,85 @@
     </div>
   </div>
 
-  <div style="text-align: center; display: none;" id="home">Home</div>
+  <div style="text-align: center;" id="home">
+    <div class="dashboard">
+      <header>
+        <div class="f fe">
+          <div class="icon icon-w"></div>
+          <div class="heading">
+            <h5 class="date" id="date"></h5>
+            <h2 class="title"></h2>
+          </div>
+        </div>
+        
+        <div class="weather f">
+          <div>
+            <strong>26°<sup>C</sup></strong>
+            <p>Indoor Temp.</p>
+          </div>
+          <div>
+            <strong>48.2%</strong>
+            <p>Outdoor Humidity</p>
+          </div>
+          <div>
+            <strong>52.99</strong>
+            <p>Indoor Temp.</p>
+          </div>
+        </div>
+      </header>
+      <section>
+      <!-- Category -->
+        <div class="category">
+          <ul>
+            <li><a href="#!" class="active">Living Room</a></li>
+            <li><a href="#!">Kitchen</a></li>
+            <li><a href="#!">Dinning</a></li>
+            <li><a href="#!">Weather</a></li>
+          </ul>
+        </div>
+      <!-- Appliances -->
+        <div class="appliances">
+          
+          <div class="appliance">
+            <input type="checkbox" name="a" id="a">
+            <label for="a">
+              <i class="l"></i>
+              <strong>Lamp</strong>
+              <span data-o="opened" data-c="closed"></span>
+              <small></small>
+            </label>
+          </div>
+          
+          <div class="appliance">
+            <input type="checkbox" name="a" id="b">
+            <label for="b">
+              <i class="r"></i>
+              <strong>Router</strong>
+              <span data-o="opened" data-c="closed"></span>
+              <small></small>
+            </label>
+          </div>
+          
+          <div class="appliance">
+            <input type="checkbox" name="a" id="c">
+            <label for="c">
+              <i class="a"></i>
+              <strong>Air</strong>
+              <span data-o="opened" data-c="closed"></span>
+              <small></small>
+            </label>
+          </div>
+          
+          <div class="appliance">
+            <input type="checkbox" name="a" id="d">
+            <label for="d">
+              <i class="f"></i>
+              <strong>Fridge</strong>
+              <span data-o="opened" data-c="closed"></span>
+              <small></small>
+            </label>
+          </div>
+  </div>
 
   <div style="text-align: center; display: none;" id="pokedex">
     <table width="250px" align="center">
@@ -294,7 +372,6 @@
         var z = document.getElementById("pokedex");
         var a = document.getElementById("cardmaker");
         if (x.style.display === "none") {
-          x.style.display = "block";
           y.style.display = "none";
           z.style.display = "none";
           a.style.display = "none";
@@ -306,6 +383,14 @@
         var element = document.body;
         element.classList.toggle("dark-mode");
       }
+
+      var d = new Date();
+      var date = d.getDate();
+      var year = d.getFullYear();
+      var month = d.getMonth();
+      var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+      month = monthArr[month];
+      document.getElementById("date").innerHTML=date+" "+month+", "+year;
     </script>
   </body>
 </html>
